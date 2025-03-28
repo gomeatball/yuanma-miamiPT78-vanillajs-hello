@@ -7,21 +7,30 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let who = ['The dog', 'My grandma', 'The mailman', 'My bird'];
-let action = ['ate', 'peed', 'crushed', 'broke'];
-let what = ['my homework', 'my phone', 'the car'];
-let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+  let pronoun = ['the', 'our', 'you', 'my', 'her', 'his'];
+  let adjective = ['great', 'big', 'silly', 'happy', 'thoughtful'];
+  let noun = ['jogger', 'racoon', 'panda', 'pig', 'chicken'];
+  let extension = [".com", '.us', '.org', '.dev', '.net']
+  
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adjective.length; j++) {
+    for (let z = 0; z < noun.length; z++) {
+     for (let x = 0; x < extension.length; x++) {
+      console.log(`${pronoun[i]}${adj[j]}${noun[z]}${extension[x]}`);
+      
+     }
 
-let randomWho = who[Math.floor(Math.random() * who.length)];
-let randomAction = action[Math.floor(Math.random() * action.length)];
-let randomWhat = what[Math.floor(Math.random() * what.length)];
-let randomWhen = when[Math.floor(Math.random() * when.length)];
+  
+  }
+   }
+    }
+  
 
-function randomExcuse() {
-  return randomWho + randomAction + randomWhat + randomWhen;
-}
-let htmlStatement = document.querySelector(".excuse")
-  htmlStatement.innerHTML = randomExcuse();
+
+
+
+
+
 };
 
 
