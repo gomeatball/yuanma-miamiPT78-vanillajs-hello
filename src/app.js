@@ -13,6 +13,9 @@ window.onload = function() {
   let extension = ["capcom", '.us']
   
 
+  let listElement = document.querySelector(".domain");
+  let listItems = [];
+
 let domainName = "";
 for (let i = 0; i < pronoun.length; i++) {
   for (let j = 0; j < adjective.length; j++) {
@@ -25,11 +28,18 @@ for (let i = 0; i < pronoun.length; i++) {
       let newExtension = newExtensionArray.join("")
             domainName = `${pronoun[i]}${adjective[j]}${noun[z]}${newExtension}`
             console.log(domainName);
+            let tem = document.createElement('li');
+            tem.innerHTML = `${domainName}`
+            listElement.appendChild(tem)
+        
+      
             
      }else {
             domainName = `${pronoun[i]}${adjective[j]}${noun[z]}${extension[x]}`; 
       console.log(domainName);
-      
+      let tem = document.createElement('li');
+      tem.innerHTML = `${domainName}`
+      listElement.appendChild(tem)
      }
         
       }
@@ -37,7 +47,15 @@ for (let i = 0; i < pronoun.length; i++) {
 
   
   }
+
+  
    }
+
+// let tem =`<li>${domainName}</li>`;
+// listItems.push(tem);
+console.log(listItems);
+
+
     }
   
 
