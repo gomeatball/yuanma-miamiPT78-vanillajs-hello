@@ -42,3 +42,19 @@ body{
     font-size: 60px;
     text-align: center;
 }
+label {
+    color: white;
+    display: block;
+}
+.switchCard {
+    width: 160px;
+    height: 90px;
+    /* background-color: antiquewhite; */
+    text-align: center;
+    margin: 10px auto;
+}
+button {
+    border-radius: 5px;
+    color: black;
+    background-color: lightgoldenrodyellow;
+}

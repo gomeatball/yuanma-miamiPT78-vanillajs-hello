@@ -7,11 +7,16 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let shapeArray = ["♦", "♥", "♠", "♣"];
+  randomCard();
+    
+  
+
+    }
+  function randomCard(){
+    let shapeArray = ["♦", "♥", "♠", "♣"];
   let randomShapeIndex = Math.floor(Math.random() * shapeArray.length);
   let shape = shapeArray[randomShapeIndex];
   // console.log("shape: ", shape);
-
 
   let shapeDisplay = document.querySelectorAll('.shape');
   // console.log("shapeDisplay: ", shapeDisplay);
@@ -44,11 +49,11 @@ let numberElement = document.querySelector(".number");
 numberElement.textContent = randomNumer;
 
 
+  }
 
-    }
-  
-
-
+    let click_button = document.querySelector("button");
+    click_button.addEventListener('click', randomCard);
+    
 
 
 
