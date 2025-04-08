@@ -1,5 +1,44 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: green;
+    padding: 0px;
+    margin: 0px;
+}
+.wholeCard {
+    margin: 20px auto;
+    width: 400px;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+#shape1 {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* background-color: aqua; */
+    position: absolute;
+    font-size: 60px;
+    text-align: center;
+}
+.number {
+    width: 100px;
+    height: 160px;
+    text-align: center;
+    /* background-color: red; */
+    font-size: 90px;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 150px;
+}
+#shape2 {
+    width: 100px;
+    height: 100px;
+    /* background-color: yellow; */
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 280px;
+    font-size: 60px;
+    text-align: center;
 }

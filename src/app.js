@@ -7,53 +7,42 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let pronoun = ['the', 'our'];
-  let adjective = ['great', 'big'];
-  let noun = ['jogger', 'racoon'];
-  let extension = ["capcom", '.us']
-  
+  let shapeArray = ["♦", "♥", "♠", "♣"];
+  let randomShapeIndex = Math.floor(Math.random() * shapeArray.length);
+  let shape = shapeArray[randomShapeIndex];
+  // console.log("shape: ", shape);
 
-  let listElement = document.querySelector(".domain");
-  let listItems = [];
 
-let domainName = "";
-for (let i = 0; i < pronoun.length; i++) {
-  for (let j = 0; j < adjective.length; j++) {
-    for (let z = 0; z < noun.length; z++) {
-     for (let x = 0; x < extension.length; x++) {
-   
-     if (extension[x] === "capcom") {
-  let  newExtensionArray = extension[x].split("");
-      newExtensionArray.splice(3,0,".")
-      let newExtension = newExtensionArray.join("")
-            domainName = `${pronoun[i]}${adjective[j]}${noun[z]}${newExtension}`
-            console.log(domainName);
-            let tem = document.createElement('li');
-            tem.innerHTML = `${domainName}`
-            listElement.appendChild(tem)
-        
-      
-            
+  let shapeDisplay = document.querySelectorAll('.shape');
+  // console.log("shapeDisplay: ", shapeDisplay);
+  for (let i = 0; i < shapeDisplay.length; i++) {
+    shapeDisplay[i].innerHTML = shape;
+    if (randomShapeIndex === 0 || randomShapeIndex === 1) {
+      shapeDisplay[i].style.color = "red"; 
      }else {
-            domainName = `${pronoun[i]}${adjective[j]}${noun[z]}${extension[x]}`; 
-      console.log(domainName);
-      let tem = document.createElement('li');
-      tem.innerHTML = `${domainName}`
-      listElement.appendChild(tem)
+      shapeDisplay[i].style.color = "black";
      }
-        
-      }
-     }
-
-  
   }
-
   
-   }
 
-// let tem =`<li>${domainName}</li>`;
-// listItems.push(tem);
-console.log(listItems);
+ 
+  
+  // function pokerCardShape() {
+  //  if (randomShapeIndex === 0 || randomShapeIndex === 1) {
+  //   shapeDisplay.style.color = "red"; 
+  //  }else {
+  //   shapeDisplay.style.color = "black";
+  //  }
+//   }
+// pokerCardShape();
+
+let pokerNumberArray = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+let randomNumberIndex = Math.floor(Math.random() * pokerNumberArray.length);
+let randomNumer = pokerNumberArray[randomNumberIndex];
+
+let numberElement = document.querySelector(".number");
+numberElement.textContent = randomNumer;
+
 
 
     }
